@@ -47,9 +47,14 @@
 <li class="toctree-l4"><a class="reference internal" href="#linux">Linux</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#building-manually-with-the-sphinx-make-file">Building manually with the sphinx make file</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#building-with-docker">Building with docker</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#id1">Windows</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id2">Linux</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#building-manually-with-the-sphinx-make-file">Building manually with the sphinx make file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Windows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">Linux</a></li>
 </ul>
 </li>
 </ul>
@@ -124,15 +129,16 @@
   <section id="contribution-guide">
 <h1>Contribution Guide<a class="headerlink" href="#contribution-guide" title="Permalink to this heading"></a></h1>
 <p>We are looking forward to every conbtirbution you possibly can bring in.</p>
-<p>If you encounter serious errors while using eventula and you are not able to fix them, feel free to open issues on <a class="reference external" href="https://github.com/th0rn0/eventula-manager/issues">https://github.com/th0rn0/eventula-manager/issues</a></p>
+<p>If you encounter serious errors while using eventula and you are not able to fix them, feel free to open issues on <a class="reference external" href="https://github.com/Lan2Play/eventula-manager/issues">https://github.com/Lan2Play/eventula-manager/issues</a></p>
 <p>If you plan to add a feature to eventula, please open an issue as well so no one has to do work when someone already working on something.</p>
 <section id="documentation">
 <h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this heading"></a></h2>
-<p>This documentation is written in restructured text and its build using sphinx and the read the docs theme. The source can be found in our main repository in the <code class="docutils literal notranslate"><span class="pre">docs/</span></code> subfolder (<a class="reference external" href="https://github.com/th0rn0/eventula-manager/tree/master/src">https://github.com/th0rn0/eventula-manager/tree/master/src</a>).
+<p>This documentation is written in restructured text and its build using sphinx and the read the docs theme. The source can be found in our main repository in the <code class="docutils literal notranslate"><span class="pre">docs/</span></code> subfolder (<a class="reference external" href="https://github.com/Lan2Play/eventula-manager/tree/master/src">https://github.com/Lan2Play/eventula-manager/tree/master/src</a>).
 Feel free to PR corrections or expansions of the documentation at any time!</p>
 <p>To build the documentation locally to the <code class="docutils literal notranslate"><span class="pre">docs/build</span></code> subfolder you have two options:</p>
 <ul class="simple">
 <li><p>Building with docker and the make file (recommended)</p></li>
+<li><p>Building with docker</p></li>
 <li><p>Building manually with the sphinx make file</p></li>
 </ul>
 <section id="building-with-docker-and-the-make-file">
@@ -158,21 +164,44 @@ Feel free to PR corrections or expansions of the documentation at any time!</p>
 <li><p>Docker (<a class="reference external" href="https://docs.docker.com/engine/install">https://docs.docker.com/engine/install</a>)</p></li>
 <li><p>Make (should be available for nearly every linux distro in the corresponding packagemanager)</p></li>
 </ul>
-<p>In order to build the documentation you have to build the build container a single time.
-change to the root folder of the repository and run</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make docs-build
+<p>In order to build the documentation run</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make docs-html
 </pre></div>
 </div>
-<p>to build the documentation run</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make docs-html
+</section>
+</section>
+<section id="building-with-docker">
+<h3>Building with docker<a class="headerlink" href="#building-with-docker" title="Permalink to this heading"></a></h3>
+<section id="id1">
+<h4>Windows<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
+<p>Prereqirements:</p>
+<ul class="simple">
+<li><p>Docker for Windows with wsl2 backend (<a class="reference external" href="https://docs.docker.com/docker-for-windows/wsl/">https://docs.docker.com/docker-for-windows/wsl/</a> Follow the Prerequisites, the Download and the Install part!)</p></li>
+</ul>
+<blockquote>
+<div><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you are using git, consider cloning the repository within your wsl distro instead of with git for windows to get around line ending problems!</p>
+</div>
+</div></blockquote>
+<p>To build the documentation just enter yor wsl2 distribution and follow the Linux part below!</p>
+</section>
+<section id="id2">
+<h4>Linux<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h4>
+<p>Prereqirements:</p>
+<ul class="simple">
+<li><p>Docker (<a class="reference external" href="https://docs.docker.com/engine/install">https://docs.docker.com/engine/install</a>)</p></li>
+</ul>
+<p>In order to build the documentation run the following command inside the root of the cloned repository</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run --rm -v <span class="nv">$PWD</span>/docs:/docs lan2play/docker-sphinxbuild:latest
 </pre></div>
 </div>
 </section>
 </section>
 <section id="building-manually-with-the-sphinx-make-file">
 <h3>Building manually with the sphinx make file<a class="headerlink" href="#building-manually-with-the-sphinx-make-file" title="Permalink to this heading"></a></h3>
-<section id="id1">
-<h4>Windows<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
+<section id="id3">
+<h4>Windows<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h4>
 <p>Prereqirements:</p>
 <ul class="simple">
 <li><p>python 3 (<a class="reference external" href="https://docs.python.org/3/using/index.html">https://docs.python.org/3/using/index.html</a>) with pip</p></li>
@@ -189,8 +218,8 @@ change to the root folder of the repository and run</p>
 </pre></div>
 </div>
 </section>
-<section id="id2">
-<h4>Linux<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h4>
+<section id="id4">
+<h4>Linux<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h4>
 <p>Prereqirements:</p>
 <ul class="simple">
 <li><p>python 3 (<a class="reference external" href="https://docs.python.org/3/using/index.html">https://docs.python.org/3/using/index.html</a>) with pip</p></li>
