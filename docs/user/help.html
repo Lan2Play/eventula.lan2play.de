@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Help System &mdash; Eventula Event Manager 2.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Games" href="games/basic.html" />
+    <link rel="prev" title="(File)Gallery" href="gallery.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Eventula Event Manager
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribution.html">Contribution Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License (GNU General Public License)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="events/basic.html">Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="news.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usermanagement.html">Usermanagement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polls.html">Polls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="venues.html">Venues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gallery.html">(File)Gallery</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Help System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#enable-disable-help">Enable/Disable Help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#add-help-category">Add Help category</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#edit-help-category">Edit Help category</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#delete-help-category">Delete Help category</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#add-helpentry">Add helpentry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#edit-helpentry">Edit helpentry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#delete-helpentry">Delete helpentry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#add-attachment-to-entry">Add attachment to entry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#delete-attachment-from-entry">Delete attachment from entry</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="games/basic.html">Games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matchmaking.html">Matchmaking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="purchases.html">Purchases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings/basic.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mailing.html">Newsletter / Mailing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credit.html">Credit System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shop.html">Shop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/basic.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dev/getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/folderstructure.html">Folderstructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/games/gamecommandhandler.html">GameCommandHandler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/games/gamematchapihandler.html">GameMatchApiHandler</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/events.html">Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/matchmaking.html">Matchmaking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/tournaments.html">Tournaments</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Eventula Event Manager</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Help System</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/user/help.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="help-system">
+<h1>Help System<a class="headerlink" href="#help-system" title="Permalink to this heading"></a></h1>
+<p>You can create help articles which will be shown on the help page of eventula.
+Also you can add files to the articles (and images via the wysiwyg editor).
+The help feature is an optional system in eventula, so you have to enable it in order to use it.</p>
+<p>The Help page will look something like this (users can also search here):</p>
+<a class="reference internal image-reference" href="../_images/help_13.png"><img alt="eventula event deletion" class="align-center" src="../_images/help_13.png" style="width: 892.5px; height: 251.0px;" /></a>
+<p>if a user expands one article with attachments by clicking on it:</p>
+<a class="reference internal image-reference" href="../_images/help_14.png"><img alt="eventula event deletion" class="align-center" src="../_images/help_14.png" style="width: 861.5px; height: 558.0px;" /></a>
+<p>if a user expands one article without attachments by clicking on it:</p>
+<a class="reference internal image-reference" href="../_images/help_15.png"><img alt="eventula event deletion" class="align-center" src="../_images/help_15.png" style="width: 855.5px; height: 468.0px;" /></a>
+<section id="enable-disable-help">
+<h2>Enable/Disable Help<a class="headerlink" href="#enable-disable-help" title="Permalink to this heading"></a></h2>
+<p>To use the help system and enable the link in your top navigation you have to enable it.
+You can either refer to the settings documentation or use the buttons direcctly on the <code class="docutils literal notranslate"><span class="pre">Gallery</span></code> site in your admin panel:</p>
+<p>Enable:</p>
+<a class="reference internal image-reference" href="../_images/help_01.png"><img alt="eventula event deletion" class="align-center" src="../_images/help_01.png" style="width: 1584.0px; height: 392.0px;" /></a>
+<p>Disable:</p>
+<a class="reference internal image-reference" href="../_images/help_02.png"><img alt="eventula event deletion" class="align-center" src="../_images/help_02.png" style="width: 1599.0px; height: 540.0px;" /></a>
+</section>
+<section id="add-help-category">
+<h2>Add Help category<a class="headerlink" href="#add-help-category" title="Permalink to this heading"></a></h2>
+<p>Lets create a help category! go to your Admin Panel to the <code class="docutils literal notranslate"><span class="pre">Help</span></code> Section and you can add your category in the <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">category</span></code> area.
+You have to fill in a name and you can add a description if you want to.</p>
+<a class="reference internal image-reference" href="../_images/help_03.png"><img alt="eventula event deletion" class="align-center" src="../_images/help_03.png" style="width: 1419.5px; height: 488.0px;" /></a>
+<p>Press <code class="docutils literal notranslate"><span class="pre">Submit</span></code> to add the Category.</p>
+<p>You will then be redirected to the detailed / editing /upload view.</p>
+</section>
+<section id="edit-help-category">
+<h2>Edit Help category<a class="headerlink" href="#edit-help-category" title="Permalink to this heading"></a></h2>
+<p>To enter the detailed / editing /upload view in the future, simply click <code class="docutils literal notranslate"><span class="pre">Edit</span></code> on the <code class="docutils literal notranslate"><span class="pre">Categorys</span></code> list entry:</p>
+<a class="reference internal image-reference" href="../_images/help_05.png"><img alt="eventula event deletion" class="align-center" src="../_images/help_05.png" style="width: 1422.5px; height: 489.5px;" /></a>
+<p>in the <code class="docutils literal notranslate"><span class="pre">Settings</span></code> area you can edit your categorys name and description, change the status (if you want to hide a specific category from the public) and
+link/ unlink an event to it.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The event link currently does nothing!</p>
+</div>
+<a class="reference internal image-reference" href="../_images/help_04.png"><img alt="eventula event deletion" class="align-center" src="../_images/help_04.png" style="width: 474.5px; height: 350.0px;" /></a>
+<p>Dont forget to submit your settings.</p>
+</section>
+<section id="delete-help-category">
+<h2>Delete Help category<a class="headerlink" href="#delete-help-category" title="Permalink to this heading"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you delete an Help category, all the entrys / attachments within it will be deleted too!</p>
+</div>
+<p>To delete a help category simply click <code class="docutils literal notranslate"><span class="pre">Delete</span></code> on the <code class="docutils literal notranslate"><span class="pre">Categorys</span></code> list entry on your <code class="docutils literal notranslate"><span class="pre">Help</span></code> admin page and confirm the upcoming messagebox:</p>
+<a class="reference internal image-reference" href="../_images/help_06.png"><img alt="eventula event deletion" class="align-center" src="../_images/help_06.png" style="width: 1425.5px; height: 483.0px;" /></a>
+</section>
+<section id="add-helpentry">
+<h2>Add helpentry<a class="headerlink" href="#add-helpentry" title="Permalink to this heading"></a></h2>
+<p>Go to the detailed / editing /upload view of your help category and fill the Name and the Content in the <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Entry</span></code> area:</p>
+<a class="reference internal image-reference" href="../_images/help_07.png"><img alt="eventula event deletion" class="align-center" src="../_images/help_07.png" style="width: 1415.0px; height: 618.5px;" /></a>
+<p>Don’t forget to press submit.</p>
+</section>
+<section id="edit-helpentry">
+<h2>Edit helpentry<a class="headerlink" href="#edit-helpentry" title="Permalink to this heading"></a></h2>
+<p>Go to the detailed / editing /upload view of your help category and you can find a list of all your entrys in the <code class="docutils literal notranslate"><span class="pre">Entrys</span></code> area.</p>
+<a class="reference internal image-reference" href="../_images/help_08.png"><img alt="eventula event deletion" class="align-center" src="../_images/help_08.png" style="width: 942.0px; height: 384.5px;" /></a>
+<p>Edit to your needs and press the <code class="docutils literal notranslate"><span class="pre">Update</span></code> button.</p>
+</section>
+<section id="delete-helpentry">
+<h2>Delete helpentry<a class="headerlink" href="#delete-helpentry" title="Permalink to this heading"></a></h2>
+<p>Go to the detailed / editing /upload view of your help category and you can find a list of all your entrys in the <code class="docutils literal notranslate"><span class="pre">Entrys</span></code> area.
+Hit the corresponding <code class="docutils literal notranslate"><span class="pre">delete</span></code> Button of the entry you want to delete and confirm the upcoming messagebox:</p>
+<a class="reference internal image-reference" href="../_images/help_09.png"><img alt="eventula event deletion" class="align-center" src="../_images/help_09.png" style="width: 930.0px; height: 387.5px;" /></a>
+</section>
+<section id="add-attachment-to-entry">
+<h2>Add attachment to entry<a class="headerlink" href="#add-attachment-to-entry" title="Permalink to this heading"></a></h2>
+<p>Go to the detailed / editing /upload view of your help category and you can find a list of all your entrys in the <code class="docutils literal notranslate"><span class="pre">Entrys</span></code> area.
+To get to the attachmets management klick the corresponding <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">Attachments</span></code> button.</p>
+<a class="reference internal image-reference" href="../_images/help_10.png"><img alt="eventula event deletion" class="align-center" src="../_images/help_10.png" style="width: 923.0px; height: 401.0px;" /></a>
+<p>Here you can find a file picker, just pick a file and hit the <code class="docutils literal notranslate"><span class="pre">Upload</span></code> button.</p>
+<a class="reference internal image-reference" href="../_images/help_11.png"><img alt="eventula event deletion" class="align-center" src="../_images/help_11.png" style="width: 537.5px; height: 243.0px;" /></a>
+</section>
+<section id="delete-attachment-from-entry">
+<h2>Delete attachment from entry<a class="headerlink" href="#delete-attachment-from-entry" title="Permalink to this heading"></a></h2>
+<p>Go to the detailed / editing /upload view of your help category and you can find a list of all your entrys in the <code class="docutils literal notranslate"><span class="pre">Entrys</span></code> area.
+To get to the attachmets management klick the corresponding <code class="docutils literal notranslate"><span class="pre">Manage</span> <span class="pre">Attachments</span></code> button.</p>
+<a class="reference internal image-reference" href="../_images/help_10.png"><img alt="eventula event deletion" class="align-center" src="../_images/help_10.png" style="width: 923.0px; height: 401.0px;" /></a>
+<p>Here you can find a list of all files, just hit the corresponding <code class="docutils literal notranslate"><span class="pre">Delete</span></code> button.</p>
+<a class="reference internal image-reference" href="../_images/help_12.png"><img alt="eventula event deletion" class="align-center" src="../_images/help_12.png" style="width: 632.0px; height: 296.0px;" /></a>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="gallery.html" class="btn btn-neutral float-left" title="(File)Gallery" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="games/basic.html" class="btn btn-neutral float-right" title="Games" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Thornton Phillis (th0rn0), Lan2Play Team (TheR00st3r, Apfelwurm, Keulerix, MD-V).</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Getting Started &mdash; Eventula Event Manager 2.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Events" href="events/basic.html" />
+    <link rel="prev" title="License (GNU General Public License)" href="../license.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Eventula Event Manager
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribution.html">Contribution Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License (GNU General Public License)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#eventula-com-hosted">Eventula.com Hosted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#eventula-self-hosted-installation">Eventula self hosted - Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-with-docker-and-your-own-database">Installation with Docker and your own Database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-with-docker-compose-bundled-with-a-database-instance">Installation with docker-compose bundled with a database instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#post-docker">Post-Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-with-the-makefile">Installation with the Makefile</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#setup-configuration">1. Setup &amp; Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#run">2. Run</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#interactive">Interactive</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#migrate-seed-database">Migrate &amp; Seed Database</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#stop">Stop</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#https">HTTPS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#caveats">Caveats</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#running-behind-a-reverse-proxy">Running behind a reverse proxy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#custom-timezone">Custom Timezone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#secret-managers">Secret Managers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Caveats</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#custom-scss-views">Custom SCSS &amp; Views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-page">Installation Page</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="events/basic.html">Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="news.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usermanagement.html">Usermanagement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polls.html">Polls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="venues.html">Venues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gallery.html">(File)Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Help System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="games/basic.html">Games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matchmaking.html">Matchmaking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="purchases.html">Purchases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings/basic.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mailing.html">Newsletter / Mailing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credit.html">Credit System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shop.html">Shop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/basic.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dev/getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/folderstructure.html">Folderstructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/games/gamecommandhandler.html">GameCommandHandler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/games/gamematchapihandler.html">GameMatchApiHandler</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/events.html">Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/matchmaking.html">Matchmaking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/tournaments.html">Tournaments</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Eventula Event Manager</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Getting Started</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/user/getting_started.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading"></a></h1>
+<p>We are glad that you want to try or use the eventula event manager.
+You have 2 different ways to distribute your instance of eventula:</p>
+<section id="eventula-com-hosted">
+<h2>Eventula.com Hosted<a class="headerlink" href="#eventula-com-hosted" title="Permalink to this heading"></a></h2>
+<p>In the future there will be the option again to get a productive instance of eventula running as a subscription service on <a class="reference external" href="https://eventula.com/">https://eventula.com/</a> .
+Currently the subscription service is not available due the small numbers of events occuring during covid.</p>
+</section>
+<section id="eventula-self-hosted-installation">
+<h2>Eventula self hosted - Installation<a class="headerlink" href="#eventula-self-hosted-installation" title="Permalink to this heading"></a></h2>
+<p>There are 3 different ways to install the eventula event Manager:</p>
+<ul>
+<li><p>Installation with Docker and your own Database</p></li>
+<li><p>Installation with docker-compose bundled with a database instance</p></li>
+<li><p>Installation with the Makefile</p>
+<blockquote>
+<div><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Currently the manager is not publicly available on Docker Hub, therfore you should use the installation variant using make or build the manager docker image yourself with our sourcecode.</p>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<section id="prerequisites">
+<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Docker v17</p></li>
+<li><p>Docker-compose v1.18</p></li>
+<li><p>API Keys for one of the Payment Providers</p></li>
+<li><p>for development / the make installation way you need <code class="docutils literal notranslate"><span class="pre">make</span></code> installed</p></li>
+</ul>
+</section>
+<section id="installation-with-docker-and-your-own-database">
+<h3>Installation with Docker and your own Database<a class="headerlink" href="#installation-with-docker-and-your-own-database" title="Permalink to this heading"></a></h3>
+<p>This method is intended to be run as just a image with your own database. Persistant storage is required for the <code class="docutils literal notranslate"><span class="pre">storage/</span></code> directory.
+You minimally have to set the <code class="docutils literal notranslate"><span class="pre">APP_URL</span></code>, <code class="docutils literal notranslate"><span class="pre">DB_HOST</span></code>, <code class="docutils literal notranslate"><span class="pre">DB_DATABASE</span></code>, <code class="docutils literal notranslate"><span class="pre">DB_USERNAME</span></code>, <code class="docutils literal notranslate"><span class="pre">DB_PASSWORD</span></code> to get it initially running.
+For productive use you have to set your <code class="docutils literal notranslate"><span class="pre">APP_KEY</span></code> (Follow Post-Docker Below) and should set <code class="docutils literal notranslate"><span class="pre">APP_DEBUG</span></code> to <code class="docutils literal notranslate"><span class="pre">false</span></code>, <code class="docutils literal notranslate"><span class="pre">APP_ENV</span></code> to <code class="docutils literal notranslate"><span class="pre">production</span></code> and you should take care of HTTPS (see HTTPS or Running behind a reverse proxy
+)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -it <span class="se">\</span>
+    -e <span class="nv">APP_DEBUG</span><span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+    -e <span class="nv">APP_ENV</span><span class="o">=</span><span class="nb">local</span> <span class="se">\</span>
+    -e <span class="nv">APP_URL</span><span class="o">=</span>localhost <span class="se">\</span>
+    -e <span class="nv">ENV_OVERRIDE</span><span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+    -e <span class="nv">DB_HOST</span><span class="o">=</span>database <span class="se">\</span>
+    -e <span class="nv">DB_DATABASE</span><span class="o">=</span>eventula_manager <span class="se">\</span>
+    -e <span class="nv">DB_PORT</span><span class="o">=</span><span class="m">3306</span> <span class="se">\</span>
+    -e <span class="nv">DB_USERNAME</span><span class="o">=</span>eventula_manager <span class="se">\</span>
+    -e <span class="nv">DB_PASSWORD</span><span class="o">=</span>password <span class="se">\</span>
+    -e <span class="nv">TIMEZONE</span><span class="o">=</span>UTC <span class="se">\</span>
+    -e <span class="nv">ANALYTICS_TRACKING_ID</span><span class="o">=</span> <span class="se">\</span>
+    -e <span class="nv">PAYPAL_USERNAME</span><span class="o">=</span> <span class="se">\</span>
+    -e <span class="nv">PAYPAL_PASSWORD</span><span class="o">=</span> <span class="se">\</span>
+    -e <span class="nv">PAYPAL_SIGNATURE</span><span class="o">=</span> <span class="se">\</span>
+    -e <span class="nv">STEAM_API_KEY</span><span class="o">=</span> <span class="se">\</span>
+    -e <span class="nv">CHALLONGE_API_KEY</span><span class="o">=</span> <span class="se">\</span>
+    -e <span class="nv">FACEBOOK_APP_ID</span><span class="o">=</span> <span class="se">\</span>
+    -e <span class="nv">FACEBOOK_APP_SECRET</span><span class="o">=</span> <span class="se">\</span>
+    -e <span class="nv">LOG_FILES</span><span class="o">=</span><span class="nb">false</span> <span class="se">\</span>
+    -e <span class="nv">ENABLE_HTTPS</span><span class="o">=</span><span class="nb">false</span> <span class="se">\</span>
+    -e <span class="nv">FORCE_APP_HTTPS</span><span class="o">=</span><span class="nb">false</span> <span class="se">\</span>
+    -e <span class="nv">SESSION_SECURE_COOKIE</span><span class="o">=</span><span class="nb">false</span> <span class="se">\</span>
+    -e <span class="nv">DB_CONNECTION</span><span class="o">=</span>mysql <span class="se">\</span>
+    -e <span class="nv">DB_MIGRATE</span><span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+    -e <span class="nv">DB_SEED</span><span class="o">=</span><span class="nb">true</span> <span class="se">\</span>
+    -p <span class="m">80</span>:80 <span class="se">\</span>
+    -p <span class="m">443</span>:443 <span class="se">\</span>
+    -v eventula_manager_storage:/web/html/storage/ <span class="se">\</span>
+    --name eventula_manager_app <span class="se">\</span>
+    eventula/manager:latest
+</pre></div>
+</div>
+<p>Follow Post-Docker Below</p>
+</section>
+<section id="installation-with-docker-compose-bundled-with-a-database-instance">
+<h3>Installation with docker-compose bundled with a database instance<a class="headerlink" href="#installation-with-docker-compose-bundled-with-a-database-instance" title="Permalink to this heading"></a></h3>
+<p>This method is intended to be run with docker-compose. It will create a full stack including database, load balancer &amp; SSL Encryption.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3.4&quot;</span><span class="w"></span>
+<span class="nt">services</span><span class="p">:</span><span class="w"></span>
+<span class="nt">app</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">eventula/manager:latest</span><span class="w"></span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">eventula_manager_certs:/etc/nginx/certs</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">eventula_manager_storage:/web/html/storage/</span><span class="w"></span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># App Config</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">APP_DEBUG=true</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">APP_ENV=local</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">APP_URL=localhost</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ENV_OVERRIDE=true</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># Database Settings</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DB_DATABASE=eventula_manager</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DB_USERNAME=eventula_manager</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DB_PASSWORD=password</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># Timezone</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TIMEZONE=UTC</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># Google Analytics</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ANALYTICS_TRACKING_ID=</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># Paypal</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PAYPAL_USERNAME=</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PAYPAL_PASSWORD=</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PAYPAL_SIGNATURE=</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># Steam</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">STEAM_API_KEY=</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># Challonge</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CHALLONGE_API_KEY=</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># Facebook</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FACEBOOK_APP_ID=</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FACEBOOK_APP_SECRET=</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># File Logger</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LOG_FILES=false</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># HTTPS</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ENABLE_HTTPS=false</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># Reverse Proxy HTTPS</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FORCE_APP_HTTPS=false</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># Only Secure Cookies</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SESSION_SECURE_COOKIE=false</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># Migrate Database on Boot</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DB_SEED=true</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DB_MIGRATE=true</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># DO NOT CHANGE BELOW</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DB_CONNECTION=mysql</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DB_PORT=3306</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DB_HOST=database</span><span class="w"></span>
+<span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">eventula_manager_app</span><span class="w"></span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80:80</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">443:443</span><span class="w"></span>
+<span class="nt">database</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql:5.7</span><span class="w"></span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">eventula_manager_database:/var/lib/mysql</span><span class="w"></span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># Change The password as according</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MYSQL_PASSWORD=password</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># DO NOT CHANGE BELOW</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MYSQL_DATABASE=eventula_manager_database</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MYSQL_USER=eventula_manager</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MYSQL_RANDOM_ROOT_PASSWORD=true</span><span class="w"></span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3306:3306</span><span class="w"></span>
+<span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">eventula_manager_database</span><span class="w"></span>
+<span class="nt">loadbalancer</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">traefik:v2.0</span><span class="w"></span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/run/docker.sock:/var/run/docker.sock:ro</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">eventula_manager_certs:/certs:z</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">eventula_manager_acme:/acme:z</span><span class="w"></span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80:80/tcp</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">443:443/tcp</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># Debug Only</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># - 8080:8080/tcp</span><span class="w"></span>
+<span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># Debug Only</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># - --api.insecure=true</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--providers.docker=true</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--entryPoints.web.address=:80</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--entryPoints.websecure.address=:443</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--providers.docker.exposedByDefault=false</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--certificatesresolvers.le.acme.email=me@mydomain.com</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--certificatesresolvers.le.acme.storage=/acme/acme.json</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--certificatesresolvers.le.acme.tlschallenge=true</span><span class="w"></span>
+<span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">eventula_manager_loadbalancer</span><span class="w"></span>
+<span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
+<span class="nt">eventula_manager_database</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">eventula_manager_database</span><span class="w"></span>
+<span class="nt">eventula_manager_certs</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">eventula_manager_certs</span><span class="w"></span>
+<span class="nt">eventula_manager_storage</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">eventula_manager_storage</span><span class="w"></span>
+<span class="nt">eventula_manager_acme</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">eventula_manager_acme</span><span class="w"></span>
+</pre></div>
+</div>
+<p>Follow Post-Docker Below</p>
+</section>
+<section id="post-docker">
+<h3>Post-Docker<a class="headerlink" href="#post-docker" title="Permalink to this heading"></a></h3>
+<p>When running for the first time you’ll be a new <code class="docutils literal notranslate"><span class="pre">APP_KEY</span></code> will be generated. Keep this safe!. You’ll need to add it to the env variables (EG <code class="docutils literal notranslate"><span class="pre">-e</span> <span class="pre">APP_KEY=someRandomKey</span></code> ) otherwise it will regenerate the <code class="docutils literal notranslate"><span class="pre">APP_KEY</span></code> on each reboot.</p>
+<p>Once running and the database has migrated go to your app and you will be greated with the install page (see Installation page below for details)</p>
+</section>
+<section id="installation-with-the-makefile">
+<h3>Installation with the Makefile<a class="headerlink" href="#installation-with-the-makefile" title="Permalink to this heading"></a></h3>
+<p>This method is intended for development but can be used in production. It uses docker-compose to build the image and database from the source code instead of pulling them from docker hub. You need the whole source code for running this! If you plan to participate in the development of eventula, its worth checking out the Makefile. There are many useful commands implemented that you can use to make your life easier (see developer documentation).</p>
+<section id="setup-configuration">
+<h4>1. Setup &amp; Configuration<a class="headerlink" href="#setup-configuration" title="Permalink to this heading"></a></h4>
+<p>Run <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">env-file</span></code> to create a <code class="docutils literal notranslate"><span class="pre">.env</span></code> file in the <code class="docutils literal notranslate"><span class="pre">src</span></code>  directory. Then modify it as according to your preferences. KEEP THIS SAFE &amp; SECURE! This file holds the credentials used within the app. If any would be hacker was to get hold of this file they have access to everything!</p>
+</section>
+<section id="run">
+<h4>2. Run<a class="headerlink" href="#run" title="Permalink to this heading"></a></h4>
+<p>Run the stack detached. This is re attachable.</p>
+<p><code class="docutils literal notranslate"><span class="pre">make</span></code></p>
+</section>
+<section id="interactive">
+<h4>Interactive<a class="headerlink" href="#interactive" title="Permalink to this heading"></a></h4>
+<p>Run the stack in the foreground. Once exited the stack will stop.</p>
+<p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">interactive</span></code></p>
+</section>
+<section id="migrate-seed-database">
+<h4>Migrate &amp; Seed Database<a class="headerlink" href="#migrate-seed-database" title="Permalink to this heading"></a></h4>
+<p>Run Database migrations and populate.</p>
+<p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">database-migrate</span></code>
+<code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">database-seed</span></code></p>
+</section>
+<section id="stop">
+<h4>Stop<a class="headerlink" href="#stop" title="Permalink to this heading"></a></h4>
+<p>Stop the stack.</p>
+<p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">stop</span></code></p>
+</section>
+</section>
+<section id="https">
+<h3>HTTPS<a class="headerlink" href="#https" title="Permalink to this heading"></a></h3>
+<p>To enable HTTPS set <code class="docutils literal notranslate"><span class="pre">ENABLE_HTTPS=true</span></code>. If you wish to use your own certs, copy them to <code class="docutils literal notranslate"><span class="pre">resources/certs</span></code> or mount in the certs to the <code class="docutils literal notranslate"><span class="pre">/etc/nginx/certs</span></code> directory on the container.</p>
+<p>Note: Only set HTTPS to true if you are doing SSL Termination within the app.</p>
+<section id="caveats">
+<h4>Caveats<a class="headerlink" href="#caveats" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>You must rename the certs to <code class="docutils literal notranslate"><span class="pre">`eventula_manager.crt`</span></code> and <code class="docutils literal notranslate"><span class="pre">`eventula_manager.key`</span></code>.</p></li>
+</ul>
+</section>
+</section>
+<section id="running-behind-a-reverse-proxy">
+<h3>Running behind a reverse proxy<a class="headerlink" href="#running-behind-a-reverse-proxy" title="Permalink to this heading"></a></h3>
+<p>If you want to run eventula with http and a reverse proxy in front which serves it to the web via https you have to enable set <code class="docutils literal notranslate"><span class="pre">ENABLE_HTTPS=false</span></code> and <code class="docutils literal notranslate"><span class="pre">FORCE_APP_HTTPS=true</span></code> in your env file / your docker-compose.yml . This will run the NGINX running eventula in http mode but it will force the https link schema for all the links in eventula.</p>
+</section>
+<section id="custom-timezone">
+<h3>Custom Timezone<a class="headerlink" href="#custom-timezone" title="Permalink to this heading"></a></h3>
+<p>If you have to run the Container for a different Timezone, you can specify it via <code class="docutils literal notranslate"><span class="pre">TIMEZONE=Europe/Berlin</span></code> in your env file / your docker-compose.yml . You have to set your specify a valid timezone name for Alpine linux.</p>
+</section>
+<section id="secret-managers">
+<h3>Secret Managers<a class="headerlink" href="#secret-managers" title="Permalink to this heading"></a></h3>
+<p>The Event Manager ships with a file reader for Env variables such as Passwords as API Keys for Secrets Managers such as Ranchers Secret Manager, EnvKey and Summon. To use it append <code class="docutils literal notranslate"><span class="pre">_FILE</span></code> to the Env variable and change the value to be the location of the secret file located on the container! It is recommended you mount a secrets directory into the container for example:</p>
+<p>If we add the volume; <code class="docutils literal notranslate"><span class="pre">resources/secrets/:/run/secrets</span></code> and store our <code class="docutils literal notranslate"><span class="pre">DB_PASSWORD</span></code> in a file called <code class="docutils literal notranslate"><span class="pre">DB_PASSWORD</span></code> in <code class="docutils literal notranslate"><span class="pre">resources/secrets/</span></code> directory, we can set <code class="docutils literal notranslate"><span class="pre">DB_PASSWORD_FILE=/run/secrets/DB_PASSWORD</span></code> and the app will read the file and inject the password into the Environment Variable <code class="docutils literal notranslate"><span class="pre">DB_PASSWORD</span></code>.</p>
+<section id="id1">
+<h4>Caveats<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>Only one entry per file</p></li>
+<li><p>File must only container value</p></li>
+<li><p>The file can be named anything, but it must be reflected in the <code class="docutils literal notranslate"><span class="pre">_FILE</span></code> env variable</p></li>
+<li><p>It will only work on the following Env Variables;</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">FACEBOOK_APP_ID</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">FACEBOOK_APP_SECRET</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">FACEBOOK_PIXEL_ID</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DB_DATABASE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DB_USERNAME</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DB_PASSWORD</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MYSQL_DATABASE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MYSQL_USER</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MYSQL_PASSWORD</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TIMEZONE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ANALYTICS_TRACKING_ID</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PAYPAL_USERNAME</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PAYPAL_PASSWORD</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PAYPAL_SIGNATURE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">STEAM_API_KEY</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CHALLONGE_API_KEY</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">APP_KEY</span></code></p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="custom-scss-views">
+<h3>Custom SCSS &amp; Views<a class="headerlink" href="#custom-scss-views" title="Permalink to this heading"></a></h3>
+<p>To load in custom SCSS (Sassy CSS) &amp; Views (Blade) mount the following directories;</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">path_to_scss:/web/html/resources/assets/sass</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path_to_views:/web/html/resources/assets/views</span></code></p></li>
+</ul>
+<p>CSS must be in SCSS format.</p>
+<p>To recompile CSS use the ‘Recompile CSS’ link located at <a class="reference external" href="http://localhost/admin/appearance">http://localhost/admin/appearance</a> (change localhost ofc with the URL of your eventula host)</p>
+<p>You can also change base variables and ad your own in the appearance page (more in the settings documentation).</p>
+</section>
+<section id="installation-page">
+<h3>Installation Page<a class="headerlink" href="#installation-page" title="Permalink to this heading"></a></h3>
+<p>the last step before you can use the event manager is the installation page, it will pop up after the initial installation.</p>
+<a class="reference internal image-reference" href="../_images/Installation01.png"><img alt="eventula installation page" class="align-center" src="../_images/Installation01.png" style="width: 455.0px; height: 568.0px;" /></a>
+<p>You have to fill out all the input fields in Step 1 &amp; Step 2 and at least the API credentials for one of the payment providers in Step 3 and finnaly click on Confirm to get redirected to your working Managers settings Page.
+To get to your front page, klick on the page title at the top left. If you want to go back to the Admin area you can do this by opening the menue while clicking onto your username in the top right corner and the entry <code class="docutils literal notranslate"><span class="pre">Admin</span></code>
+If you want to know all about the settings, take a look into the settings documentation part. But you can follow step to step and we tell you if you have to take care of something in the settings part.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../license.html" class="btn btn-neutral float-left" title="License (GNU General Public License)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="events/basic.html" class="btn btn-neutral float-right" title="Events" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Thornton Phillis (th0rn0), Lan2Play Team (TheR00st3r, Apfelwurm, Keulerix, MD-V).</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

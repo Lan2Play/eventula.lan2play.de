@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>(File)Gallery &mdash; Eventula Event Manager 2.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Help System" href="help.html" />
+    <link rel="prev" title="Venues" href="venues.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Eventula Event Manager
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribution.html">Contribution Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License (GNU General Public License)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="events/basic.html">Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="news.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usermanagement.html">Usermanagement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polls.html">Polls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="venues.html">Venues</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">(File)Gallery</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#enable-disable-gallery">Enable/Disable Gallery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#add-album">Add Album</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#edit-album">Edit Album</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#add-images-files">Add images / files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#edit-images-files">Edit images / files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#delete-images-files">Delete images / files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#delete-album">Delete Album</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Help System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="games/basic.html">Games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matchmaking.html">Matchmaking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="purchases.html">Purchases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings/basic.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mailing.html">Newsletter / Mailing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credit.html">Credit System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shop.html">Shop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/basic.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dev/getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/folderstructure.html">Folderstructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/games/gamecommandhandler.html">GameCommandHandler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/games/gamematchapihandler.html">GameMatchApiHandler</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/events.html">Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/matchmaking.html">Matchmaking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/tournaments.html">Tournaments</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Eventula Event Manager</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>(File)Gallery</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/user/gallery.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="file-gallery">
+<h1>(File)Gallery<a class="headerlink" href="#file-gallery" title="Permalink to this heading"></a></h1>
+<p>You can create gallerys which will be shown on the gallery page of eventula where you can add images and files.
+Also you can link the gallery to an event.
+The file upload feature is amongst other things nice to provide demos of your last tournament.
+The gallery feature is an optional system in eventula, so you have to enable it in order to use it.</p>
+<p>The Gallery in the frontend will look something like this:</p>
+<p>Overview with example album without an event linked</p>
+<a class="reference internal image-reference" href="../_images/gallery_07.png"><img alt="eventula event deletion" class="align-center" src="../_images/gallery_07.png" style="width: 941.0px; height: 369.5px;" /></a>
+<p>Overview with example album with an event linked</p>
+<a class="reference internal image-reference" href="../_images/gallery_11.png"><img alt="eventula event deletion" class="align-center" src="../_images/gallery_11.png" style="width: 882.5px; height: 346.5px;" /></a>
+<p>If a user clicks on it it will look like this:</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Currently the images are not correctly thumbnailed in the detailed view. Issue: <a class="reference external" href="https://github.com/Lan2Play/eventula-manager/issues/155">https://github.com/Lan2Play/eventula-manager/issues/155</a></p>
+</div>
+<p>Detailed with example album without an event linked</p>
+<a class="reference internal image-reference" href="../_images/gallery_09.png"><img alt="eventula event deletion" class="align-center" src="../_images/gallery_09.png" style="width: 891.5px; height: 507.5px;" /></a>
+<p>Detailed with example album with an event linked</p>
+<a class="reference internal image-reference" href="../_images/gallery_12.png"><img alt="eventula event deletion" class="align-center" src="../_images/gallery_12.png" style="width: 921.5px; height: 584.0px;" /></a>
+<section id="enable-disable-gallery">
+<h2>Enable/Disable Gallery<a class="headerlink" href="#enable-disable-gallery" title="Permalink to this heading"></a></h2>
+<p>To use the Gallery system and enable the link in your top navigation you have to enable it.
+You can either refer to the settings documentation or use the buttons direcctly on the <code class="docutils literal notranslate"><span class="pre">Gallery</span></code> site in your admin panel:</p>
+<p>Enable:</p>
+<a class="reference internal image-reference" href="../_images/gallery_01.png"><img alt="eventula event deletion" class="align-center" src="../_images/gallery_01.png" style="width: 1595.0px; height: 515.0px;" /></a>
+<p>Disable:</p>
+<a class="reference internal image-reference" href="../_images/gallery_14.png"><img alt="eventula event deletion" class="align-center" src="../_images/gallery_14.png" style="width: 1420.5px; height: 484.5px;" /></a>
+</section>
+<section id="add-album">
+<h2>Add Album<a class="headerlink" href="#add-album" title="Permalink to this heading"></a></h2>
+<p>Lets create an Album! go to your Admin Panel to the <code class="docutils literal notranslate"><span class="pre">Gallery</span></code> Section and you can add your venue in the <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Album</span></code> area.
+You have to fill in a name and you can add a description if you want to.</p>
+<a class="reference internal image-reference" href="../_images/gallery_02.png"><img alt="eventula event deletion" class="align-center" src="../_images/gallery_02.png" style="width: 1420.5px; height: 486.5px;" /></a>
+<p>Press <code class="docutils literal notranslate"><span class="pre">Submit</span></code> to add the Album.</p>
+<p>You will then be redirected to the detailed / editing /upload view.</p>
+</section>
+<section id="edit-album">
+<h2>Edit Album<a class="headerlink" href="#edit-album" title="Permalink to this heading"></a></h2>
+<p>To enter the detailed / editing /upload view in the future, simply click <code class="docutils literal notranslate"><span class="pre">Edit</span></code> on the <code class="docutils literal notranslate"><span class="pre">Albums</span></code> list entry:</p>
+<a class="reference internal image-reference" href="../_images/gallery_05.png"><img alt="eventula event deletion" class="align-center" src="../_images/gallery_05.png" style="width: 1423.5px; height: 477.5px;" /></a>
+<p>in the <code class="docutils literal notranslate"><span class="pre">Settings</span></code> area you can edit your albums name and description, change the status (if you want to hide a specific Album from the public) and
+link/ unlink an event to it.
+Here is an example how you can link an event to your created Album:</p>
+<a class="reference internal image-reference" href="../_images/gallery_10.png"><img alt="eventula event deletion" class="align-center" src="../_images/gallery_10.png" style="width: 1417.5px; height: 610.5px;" /></a>
+<p>Dont forget to submit your settings.</p>
+</section>
+<section id="add-images-files">
+<h2>Add images / files<a class="headerlink" href="#add-images-files" title="Permalink to this heading"></a></h2>
+<p>Go to the detailed / editing /upload view of your album and you can find a file picker in the <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Images</span></code> area:</p>
+<a class="reference internal image-reference" href="../_images/gallery_03.png"><img alt="eventula event deletion" class="align-center" src="../_images/gallery_03.png" style="width: 1413.0px; height: 631.5px;" /></a>
+<p>Just select (a) image(s)/file(s) and hit the Upload button.</p>
+</section>
+<section id="edit-images-files">
+<h2>Edit images / files<a class="headerlink" href="#edit-images-files" title="Permalink to this heading"></a></h2>
+<p>Go to the detailed / editing /upload view of your album and you can find a list of all your files and images in the <code class="docutils literal notranslate"><span class="pre">Images</span></code> area.</p>
+<a class="reference internal image-reference" href="../_images/gallery_04.png"><img alt="eventula event deletion" class="align-center" src="../_images/gallery_04.png" style="width: 1424.0px; height: 627.5px;" /></a>
+<p>You can enter a description for each image / file and set one as the album cover (recommended to set one!).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The image description is currently only visible in the admin panel!</p>
+</div>
+</section>
+<section id="delete-images-files">
+<h2>Delete images / files<a class="headerlink" href="#delete-images-files" title="Permalink to this heading"></a></h2>
+<p>Go to the detailed / editing /upload view of your album and you can find a list of all your files and images in the <code class="docutils literal notranslate"><span class="pre">Images</span></code> area.
+Hit the corresponding <code class="docutils literal notranslate"><span class="pre">delete</span></code> Button of the image / file you want to delete and confirm the upcoming messagebox:</p>
+<a class="reference internal image-reference" href="../_images/gallery_13.png"><img alt="eventula event deletion" class="align-center" src="../_images/gallery_13.png" style="width: 1417.0px; height: 624.0px;" /></a>
+</section>
+<section id="delete-album">
+<h2>Delete Album<a class="headerlink" href="#delete-album" title="Permalink to this heading"></a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you delete an Album, all the images / files within it will be deleted too!</p>
+</div>
+<p>To delete an Album simply click <code class="docutils literal notranslate"><span class="pre">Delete</span></code> on the <code class="docutils literal notranslate"><span class="pre">Albums</span></code> list entry on your <code class="docutils literal notranslate"><span class="pre">Gallery</span></code> admin page and confirm the upcoming messagebox:</p>
+<a class="reference internal image-reference" href="../_images/gallery_06.png"><img alt="eventula event deletion" class="align-center" src="../_images/gallery_06.png" style="width: 1417.0px; height: 483.5px;" /></a>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="venues.html" class="btn btn-neutral float-left" title="Venues" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="help.html" class="btn btn-neutral float-right" title="Help System" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Thornton Phillis (th0rn0), Lan2Play Team (TheR00st3r, Apfelwurm, Keulerix, MD-V).</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

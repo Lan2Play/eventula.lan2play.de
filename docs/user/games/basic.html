@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Games &mdash; Eventula Event Manager 2.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Matchmaking" href="../matchmaking.html" />
+    <link rel="prev" title="Help System" href="../help.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Eventula Event Manager
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contribution.html">Contribution Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">License (GNU General Public License)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../events/basic.html">Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../news.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usermanagement.html">Usermanagement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../polls.html">Polls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../venues.html">Venues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../gallery.html">(File)Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Help System</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Games</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#basic">Basic</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#add-game">Add Game</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#edit-game">Edit Game</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#gameservers">Gameservers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#add-gameserver">Add Gameserver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#edit-gameserver">Edit Gameserver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#frontend-gameserver-features">Frontend Gameserver Features</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#gamecommands">GameCommands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gamecommandparameters">GameCommandParameters</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../matchmaking.html">Matchmaking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../purchases.html">Purchases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../settings/basic.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mailing.html">Newsletter / Mailing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../credit.html">Credit System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../shop.html">Shop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/basic.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../dev/getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev/folderstructure.html">Folderstructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev/games/gamecommandhandler.html">GameCommandHandler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev/games/gamematchapihandler.html">GameMatchApiHandler</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api/events.html">Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/matchmaking.html">Matchmaking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/tournaments.html">Tournaments</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Eventula Event Manager</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Games</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/user/games/basic.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="games">
+<h1>Games<a class="headerlink" href="#games" title="Permalink to this heading"></a></h1>
+<section id="basic">
+<h2>Basic<a class="headerlink" href="#basic" title="Permalink to this heading"></a></h2>
+<p>You can create games which will be available in your event, your tournaments and your matchmaking.
+You are then able to add gameservers for each game and for a few games you can show serverstats / remote control the servers from eventula or even automate your matchmaking or tournament.</p>
+<section id="add-game">
+<h3>Add Game<a class="headerlink" href="#add-game" title="Permalink to this heading"></a></h3>
+<p>Lets create a game! go to your Admin Panel to the <code class="docutils literal notranslate"><span class="pre">Games</span></code> Section and you can add your game in the <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Game</span></code> area.
+To use the basic features like manual tournaments you have to fill in a name and you can add a description, a version if you want to.
+Its recommended to add a <code class="docutils literal notranslate"><span class="pre">Thumbnail</span> <span class="pre">Image</span></code> and a <code class="docutils literal notranslate"><span class="pre">Header</span> <span class="pre">Image</span></code>, they will be shown on the tournaments / matches.</p>
+<a class="reference internal image-reference" href="../../_images/games_add_01.png"><img alt="eventula event deletion" class="align-center" src="../../_images/games_add_01.png" style="width: 189.0px; height: 356.0px;" /></a>
+<p>If you want to enable the possibilities to show the status of the later created gameservers on either the events page or the public page or you want to remotly control the gamservers via eventula you have to select a <code class="docutils literal notranslate"><span class="pre">Game</span> <span class="pre">Commandhandler</span></code></p>
+<p>The currently available Commandhandlers are:</p>
+<ul class="simple">
+<li><p>SourceQuery GoldSource (supported games: full support for all HL1/HL2 games and mods )</p></li>
+<li><p>SourceQuery Source (supported games: CS:GO, Minecraft only commands | no status support)</p></li>
+<li><p>Maniaplanet XRPC (supported games: Trackmania nations, and all new maniaplanet games )</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/games_add_02.png"><img alt="eventula event deletion" class="align-center" src="../../_images/games_add_02.png" style="width: 168.0px; height: 111.5px;" /></a>
+<p>If you want to enable the possibilities to manage fully automated tournaments or fully automated matchmaking you have to set <code class="docutils literal notranslate"><span class="pre">Game</span> <span class="pre">Match</span> <span class="pre">Api</span> <span class="pre">handler</span></code> as well as the corresponding <code class="docutils literal notranslate"><span class="pre">Game</span> <span class="pre">Commandhandler</span></code>.</p>
+<p>The currently available APIhandlers are:</p>
+<ul class="simple">
+<li><p>Get5 (supported games: CS:GO with the <a class="reference external" href="https://github.com/splewis/get5">Get5 Plugin from Splewis</a> and the <a class="reference external" href="https://github.com/Lan2Play/get5_eventula_apistats">get5_eventula_apistats plugin</a>)</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/games_add_03.png"><img alt="eventula event deletion" class="align-center" src="../../_images/games_add_03.png" style="width: 183.5px; height: 117.0px;" /></a>
+<p>For an explanation of the fields <code class="docutils literal notranslate"><span class="pre">Connect</span> <span class="pre">Game</span> <span class="pre">URL</span></code>, <code class="docutils literal notranslate"><span class="pre">Connect</span> <span class="pre">Game</span> <span class="pre">Command</span></code> and <code class="docutils literal notranslate"><span class="pre">Connect</span> <span class="pre">Stream</span> <span class="pre">URL</span></code> take a look on the <code class="docutils literal notranslate"><span class="pre">Frontend</span> <span class="pre">Gameserver</span> <span class="pre">Features</span></code> section of the documentation.</p>
+<p>For a fully working example of the automated Tournament / Matchmaking take a look on the <code class="docutils literal notranslate"><span class="pre">Tutorials</span></code> section of the documentation.</p>
+<p>Press <code class="docutils literal notranslate"><span class="pre">Submit</span></code> to add the Category.</p>
+<p>You will then be redirected to the detailed / editing /upload view.</p>
+</section>
+<section id="edit-game">
+<h3>Edit Game<a class="headerlink" href="#edit-game" title="Permalink to this heading"></a></h3>
+<p>To edit a game, go to your Admin Panel to the <code class="docutils literal notranslate"><span class="pre">Games</span></code> Section and klick on <code class="docutils literal notranslate"><span class="pre">Edit</span></code> on the game entry in the <code class="docutils literal notranslate"><span class="pre">Games</span></code> area.</p>
+<a class="reference internal image-reference" href="../../_images/games_edit_01.png"><img alt="eventula event deletion" class="align-center" src="../../_images/games_edit_01.png" style="width: 766.5px; height: 244.5px;" /></a>
+<p>You will then be redirected to the detailed / editing /upload view of the game.</p>
+<p>You can edit the games parameters in the <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">Game</span></code> Section. Additionally to the parameters you had available in the Add Game step, you can set the public visibillity of a game (Currently not working!) and a <code class="docutils literal notranslate"><span class="pre">Match</span> <span class="pre">start</span> <span class="pre">command</span></code> that is needed for the automatic tournament / matchmaking (see the <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Game</span></code> section of the documentation or for a fully working example of the automated Tournament / Matchmaking take a look on the <code class="docutils literal notranslate"><span class="pre">Tutorials</span></code> section of the documentation.)</p>
+<p>For an explanation of the fields <code class="docutils literal notranslate"><span class="pre">Connect</span> <span class="pre">Game</span> <span class="pre">URL</span></code>, <code class="docutils literal notranslate"><span class="pre">Connect</span> <span class="pre">Game</span> <span class="pre">Command</span></code> and <code class="docutils literal notranslate"><span class="pre">Connect</span> <span class="pre">Stream</span> <span class="pre">URL</span></code> take a look on the <code class="docutils literal notranslate"><span class="pre">Frontend</span> <span class="pre">Gameserver</span> <span class="pre">Features</span></code> section of the documentation.</p>
+<p>The changes can be saved with a click on the <code class="docutils literal notranslate"><span class="pre">Submit</span></code> Button in the <code class="docutils literal notranslate"><span class="pre">Edit</span> <span class="pre">Game</span></code> Section.</p>
+<p>In the bottom you can now add Game Servers to the game. Please look into the following <code class="docutils literal notranslate"><span class="pre">Gameservers</span></code> section of the documentation.</p>
+</section>
+</section>
+<section id="gameservers">
+<h2>Gameservers<a class="headerlink" href="#gameservers" title="Permalink to this heading"></a></h2>
+<section id="add-gameserver">
+<h3>Add Gameserver<a class="headerlink" href="#add-gameserver" title="Permalink to this heading"></a></h3>
+<p>To show gameservers on your event live page, and to enable the automatic Matchmaking / Tournament Features, you can add Gameservers to any game. Lets create a game server! go to your Admin Panel to the <code class="docutils literal notranslate"><span class="pre">Games</span></code> Section and klick on <code class="docutils literal notranslate"><span class="pre">Edit</span></code> on the game entry in the <code class="docutils literal notranslate"><span class="pre">Games</span></code> area on which you want to add a gameserver.
+In the bottom you can now add Game Servers to the game in the <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Game</span> <span class="pre">Server</span></code> section:</p>
+<a class="reference internal image-reference" href="../../_images/games_gameserver_add_01.png"><img alt="eventula event deletion" class="align-center" src="../../_images/games_gameserver_add_01.png" style="width: 382.5px; height: 407.5px;" /></a>
+<ul class="simple">
+<li><p>You have to specify at least the <code class="docutils literal notranslate"><span class="pre">Name</span></code>, the <code class="docutils literal notranslate"><span class="pre">Adress</span></code> (or ip), the <code class="docutils literal notranslate"><span class="pre">Type</span></code> and the <code class="docutils literal notranslate"><span class="pre">Game</span> <span class="pre">Port</span></code>.</p></li>
+<li><p>If you select the <code class="docutils literal notranslate"><span class="pre">Type</span></code> <code class="docutils literal notranslate"><span class="pre">Casual</span></code> and <code class="docutils literal notranslate"><span class="pre">Server</span> <span class="pre">is</span> <span class="pre">Enabled</span></code>, the Server will be shown on your events live page.</p></li>
+<li><p>If you select the <code class="docutils literal notranslate"><span class="pre">Type</span></code> <code class="docutils literal notranslate"><span class="pre">Casual</span></code>, <code class="docutils literal notranslate"><span class="pre">Server</span> <span class="pre">is</span> <span class="pre">Enabled</span></code> and <code class="docutils literal notranslate"><span class="pre">Server</span> <span class="pre">is</span> <span class="pre">Public</span></code> the Server will be shown on your events live page and your homepage.</p></li>
+<li><p>If you select the <code class="docutils literal notranslate"><span class="pre">Type</span></code> <code class="docutils literal notranslate"><span class="pre">Match</span></code> and <code class="docutils literal notranslate"><span class="pre">Server</span> <span class="pre">is</span> <span class="pre">Enabled</span></code> the Server will be used for Matchmaking and tournaments if you enable it on the game itself.</p></li>
+<li><p>If your Server needs a connection password, you can specify it in <code class="docutils literal notranslate"><span class="pre">Game</span> <span class="pre">Password</span></code>.</p></li>
+<li><p>Some games support streaming (like CS:GO). To enable your users to stream the game, you can enter the streaming port (eg. Sourcetv) in the <code class="docutils literal notranslate"><span class="pre">Stream</span> <span class="pre">Port</span></code> field.</p></li>
+<li><p>If you use a game with a supported Commandhandlers (See the <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Game</span></code> section in the documentation), you should add the <code class="docutils literal notranslate"><span class="pre">RCON</span> <span class="pre">Port</span></code> (mostly same as the game port) and the <code class="docutils literal notranslate"><span class="pre">RCON</span> <span class="pre">Password</span></code> to enable status checking or (automatic) remote controlling of the Gameserver.</p></li>
+</ul>
+</section>
+<section id="edit-gameserver">
+<h3>Edit Gameserver<a class="headerlink" href="#edit-gameserver" title="Permalink to this heading"></a></h3>
+</section>
+<section id="frontend-gameserver-features">
+<h3>Frontend Gameserver Features<a class="headerlink" href="#frontend-gameserver-features" title="Permalink to this heading"></a></h3>
+<p>The basic view of a Gameserver with no Commandhandler selected looks like this on the event live page:</p>
+<a class="reference internal image-reference" href="../../_images/games_gameserver_01.png"><img alt="eventula event deletion" class="align-center" src="../../_images/games_gameserver_01.png" style="width: 614.0px; height: 369.0px;" /></a>
+<p>and like this on the Homepage:</p>
+<a class="reference internal image-reference" href="../../_images/games_gameserver_02.png"><img alt="eventula event deletion" class="align-center" src="../../_images/games_gameserver_02.png" style="width: 846.0px; height: 530.5px;" /></a>
+<p>Some Games support joining to a server via a URL or a command. To enable that you have to fill the fields <code class="docutils literal notranslate"><span class="pre">Connect</span> <span class="pre">Game</span> <span class="pre">URL</span></code>, <code class="docutils literal notranslate"><span class="pre">Connect</span> <span class="pre">Game</span> <span class="pre">Command</span></code> and <code class="docutils literal notranslate"><span class="pre">Connect</span> <span class="pre">Stream</span> <span class="pre">URL</span></code> in your corresponding game.</p>
+<p>You can use variables in these fields which get resolved for the end user.</p>
+<ul class="simple">
+<li><p>Use Variables in commands like this: {&gt;gameServer}</p></li>
+<li><p>If the used variable contains an object the Properties can also be accessed: {&gt;gameServer-&gt;address} or {&gt;gameServer-&gt;rcon_port}</p></li>
+<li><p>If you need the parameter as an optional parameter (for example the password for the connect url/command: {&gt;§gameserver-&gt;password}</p></li>
+</ul>
+<p>The available variables are:</p>
+<ul class="simple">
+<li><p>{&gt;gameServer-&gt;address}</p></li>
+<li><p>{&gt;gameServer-&gt;game_port}</p></li>
+<li><p>{&gt;§gameServer-&gt;game_password}</p></li>
+<li><p>{&gt;gameServer-&gt;stream_port}</p></li>
+</ul>
+<p>Examples:</p>
+<ul class="simple">
+<li><p>So for example your <code class="docutils literal notranslate"><span class="pre">Connect</span> <span class="pre">Game</span> <span class="pre">URL</span></code> for a steam game could look something like that:</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">steam://connect/{&gt;gameServer-&gt;address}:{&gt;gameServer-&gt;game_port}/{&gt;§gameServer-&gt;game_password}</span></code></p>
+<ul class="simple">
+<li><p>Also for example your <code class="docutils literal notranslate"><span class="pre">Connect</span> <span class="pre">Game</span> <span class="pre">Command</span></code> for a steam game could look something like that:</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">password</span> <span class="pre">{&gt;§gameServer-&gt;game_password};</span> <span class="pre">connect</span> <span class="pre">{&gt;gameServer-&gt;address}:{&gt;gameServer-&gt;game_port}</span></code></p>
+<ul class="simple">
+<li><p>Also for example your <code class="docutils literal notranslate"><span class="pre">Connect</span> <span class="pre">Stream</span> <span class="pre">URL</span></code> for a steam game could look something like that:</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">steam://connect/{&gt;gameServer-&gt;address}:{&gt;gameServer-&gt;stream_port}</span></code></p>
+<p>If you set everything, your Server looks like this in the event live view:</p>
+<a class="reference internal image-reference" href="../../_images/games_gameserver_03.png"><img alt="eventula event deletion" class="align-center" src="../../_images/games_gameserver_03.png" style="width: 619.5px; height: 390.5px;" /></a>
+<p>And like this on your Homepage:</p>
+<a class="reference internal image-reference" href="../../_images/games_gameserver_04.png"><img alt="eventula event deletion" class="align-center" src="../../_images/games_gameserver_04.png" style="width: 817.0px; height: 429.0px;" /></a>
+<p>if you set the <code class="docutils literal notranslate"><span class="pre">Commandhandler</span></code> and the <code class="docutils literal notranslate"><span class="pre">RCON</span> <span class="pre">password</span></code> and the <code class="docutils literal notranslate"><span class="pre">RCON</span> <span class="pre">Port</span></code> on your game the status of your Server is shown in both views and in the Admin Area:</p>
+<a class="reference internal image-reference" href="../../_images/games_gameserver_06.png"><img alt="eventula event deletion" class="align-center" src="../../_images/games_gameserver_06.png" style="width: 514.0px; height: 430.5px;" /></a>
+<a class="reference internal image-reference" href="../../_images/games_gameserver_05.png"><img alt="eventula event deletion" class="align-center" src="../../_images/games_gameserver_05.png" style="width: 928.0px; height: 469.0px;" /></a>
+<a class="reference internal image-reference" href="../../_images/games_gameserver_07.png"><img alt="eventula event deletion" class="align-center" src="../../_images/games_gameserver_07.png" style="width: 777.0px; height: 255.0px;" /></a>
+</section>
+</section>
+<section id="gamecommands">
+<h2>GameCommands<a class="headerlink" href="#gamecommands" title="Permalink to this heading"></a></h2>
+</section>
+<section id="gamecommandparameters">
+<h2>GameCommandParameters<a class="headerlink" href="#gamecommandparameters" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../help.html" class="btn btn-neutral float-left" title="Help System" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../matchmaking.html" class="btn btn-neutral float-right" title="Matchmaking" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Thornton Phillis (th0rn0), Lan2Play Team (TheR00st3r, Apfelwurm, Keulerix, MD-V).</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

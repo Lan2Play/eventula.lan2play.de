@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Venues &mdash; Eventula Event Manager 2.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="(File)Gallery" href="gallery.html" />
+    <link rel="prev" title="Polls" href="polls.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Eventula Event Manager
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribution.html">Contribution Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License (GNU General Public License)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="events/basic.html">Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="news.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usermanagement.html">Usermanagement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polls.html">Polls</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Venues</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#add-venue">Add Venue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#edit-venue">Edit Venue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#delete-venue">Delete Venue</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gallery.html">(File)Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Help System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="games/basic.html">Games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matchmaking.html">Matchmaking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="purchases.html">Purchases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="settings/basic.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mailing.html">Newsletter / Mailing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="credit.html">Credit System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shop.html">Shop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tutorials/basic.html">Tutorials</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../dev/getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/folderstructure.html">Folderstructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/games/gamecommandhandler.html">GameCommandHandler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev/games/gamematchapihandler.html">GameMatchApiHandler</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">API Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/events.html">Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/matchmaking.html">Matchmaking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/tournaments.html">Tournaments</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Eventula Event Manager</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Venues</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/user/venues.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="venues">
+<h1>Venues<a class="headerlink" href="#venues" title="Permalink to this heading"></a></h1>
+<p>You can create venues for your events so you dont need to enter the adress for every event.</p>
+<section id="add-venue">
+<h2>Add Venue<a class="headerlink" href="#add-venue" title="Permalink to this heading"></a></h2>
+<p>Lets create a Venue! go to your Admin Panel to the <code class="docutils literal notranslate"><span class="pre">Venues</span></code> Section and you can add your venue in the <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">Venue</span></code> area.
+You have to fill everything and you can add a image if you want:</p>
+<a class="reference internal image-reference" href="../_images/venues_01.png"><img alt="eventula event deletion" class="align-center" src="../_images/venues_01.png" style="width: 1407.0px; height: 587.0px;" /></a>
+<p>Press <code class="docutils literal notranslate"><span class="pre">Submit</span></code> to add the venue.</p>
+<p>You will then be redirected to the detailed / editing view.</p>
+<p>The venue details will be shown on the events page when you associate the venue to the event (sample pictures from <a class="reference external" href="https://unsplash.com/">https://unsplash.com/</a> ):</p>
+<a class="reference internal image-reference" href="../_images/venues_05.png"><img alt="eventula event deletion" class="align-center" src="../_images/venues_05.png" style="width: 880.5px; height: 603.5px;" /></a>
+</section>
+<section id="edit-venue">
+<h2>Edit Venue<a class="headerlink" href="#edit-venue" title="Permalink to this heading"></a></h2>
+<p>To edit a venue simply click <code class="docutils literal notranslate"><span class="pre">Edit</span></code> on the <code class="docutils literal notranslate"><span class="pre">Venues</span></code> list entry:</p>
+<a class="reference internal image-reference" href="../_images/venues_02.png"><img alt="eventula event deletion" class="align-center" src="../_images/venues_02.png" style="width: 1423.5px; height: 545.0px;" /></a>
+<p>You will then be redirected to the detailed / editing view, here you can edit all the details and you also can add/delete associated image(s) there.</p>
+<a class="reference internal image-reference" href="../_images/venues_04.png"><img alt="eventula event deletion" class="align-center" src="../_images/venues_04.png" style="width: 1395.5px; height: 737.0px;" /></a>
+</section>
+<section id="delete-venue">
+<h2>Delete Venue<a class="headerlink" href="#delete-venue" title="Permalink to this heading"></a></h2>
+<p>To delete a venue simply click <code class="docutils literal notranslate"><span class="pre">Delete</span></code> on the <code class="docutils literal notranslate"><span class="pre">Venues</span></code> list entry and confirm the upcoming messagebox:</p>
+<a class="reference internal image-reference" href="../_images/venues_03.png"><img alt="eventula event deletion" class="align-center" src="../_images/venues_03.png" style="width: 1409.0px; height: 550.5px;" /></a>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="polls.html" class="btn btn-neutral float-left" title="Polls" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="gallery.html" class="btn btn-neutral float-right" title="(File)Gallery" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Thornton Phillis (th0rn0), Lan2Play Team (TheR00st3r, Apfelwurm, Keulerix, MD-V).</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
