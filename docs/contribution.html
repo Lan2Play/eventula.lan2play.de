@@ -62,7 +62,12 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#localisation">Localisation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#documentation-localisation">Documentation localisation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#eventula-localisation">Eventula localisation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eventula-localisation">Eventula localisation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#translation-status">translation status</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#translate-with-weblate">translate with weblate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#translate-without-weblate">translate without weblate</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#code">Code</a></li>
@@ -244,6 +249,16 @@ Feel free to PR corrections or expansions of the documentation at any time!</p>
 </section>
 <section id="eventula-localisation">
 <h3>Eventula localisation<a class="headerlink" href="#eventula-localisation" title="Permalink to this heading"></a></h3>
+<section id="translation-status">
+<h4>translation status<a class="headerlink" href="#translation-status" title="Permalink to this heading"></a></h4>
+<a class="reference external image-reference" href="https://translate.lan2play.de/engage/eventula-manager/"><img alt="Translation status" src="https://translate.lan2play.de/widgets/eventula-manager/-/multi-auto.svg" /></a>
+</section>
+<section id="translate-with-weblate">
+<h4>translate with weblate<a class="headerlink" href="#translate-with-weblate" title="Permalink to this heading"></a></h4>
+<p>You can find the client translation on our <a class="reference external" href="https://translate.lan2play.de/engage/eventula-manager/">Weblate project</a></p>
+</section>
+<section id="translate-without-weblate">
+<h4>translate without weblate<a class="headerlink" href="#translate-without-weblate" title="Permalink to this heading"></a></h4>
 <p>You can find the localisation files in <code class="docutils literal notranslate"><span class="pre">src/resources/lang/</span></code>. If you want to fix mistakes, you can find the files for every translated language in the corresponding subfolder.
 If you want to add a whole language, copy the whole en folder and rename it to the Language code you want to add. The language files are Key - Value pair files, just edit the Value in there.</p>
 <p>The localisations could be accessed in the PHP code with (example whoeweare from src/resources/lang/de/about.php):</p>
@@ -254,6 +269,7 @@ If you want to add a whole language, copy the whole en folder and rename it to t
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">@lang(&#39;about.whoeweare&#39;)</span>
 </pre></div>
 </div>
+</section>
 </section>
 </section>
 <section id="code">
