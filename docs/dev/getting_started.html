@@ -144,6 +144,7 @@
 <li><p>Docker-compose v1.18+</p></li>
 <li><p>API Keys for one of the Payment Providers</p></li>
 <li><p>you need <code class="docutils literal notranslate"><span class="pre">make</span></code> installed</p></li>
+<li><p>your default user needs access to the docker daemon (<a class="reference external" href="https://docs.docker.com/engine/install/linux-postinstall/">https://docs.docker.com/engine/install/linux-postinstall/</a>)</p></li>
 </ul>
 </section>
 <section id="initial-setup">
@@ -152,6 +153,14 @@
 <p>You need the whole source code cloned for running this!</p>
 <p>Its worth checking out the Makefile, there are many useful commands implemented that you can use to make your life easier.</p>
 <p>This Makefile will be documented fully soon.</p>
+<blockquote>
+<div><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not use your root user to run this commands or clone the repository!</p>
+<p>Do not use any commands from the make file that include <code class="docutils literal notranslate"><span class="pre">--user</span> <span class="pre">82:82</span></code> or <code class="docutils literal notranslate"><span class="pre">--user</span> <span class="pre">0</span></code> (like <code class="docutils literal notranslate"><span class="pre">npm-install-gh</span></code> or <code class="docutils literal notranslate"><span class="pre">composer-install</span></code>).</p>
+<p><strong>In both cases you will have permission problems!</strong></p>
+</div>
+</div></blockquote>
 <section id="clone-repository">
 <h3>1. Clone Repository<a class="headerlink" href="#clone-repository" title="Permalink to this heading"></a></h3>
 <p>Run <code class="docutils literal notranslate"><span class="pre">https://github.com/Lan2Play/eventula-manager.git</span></code> and change into it.</p>
