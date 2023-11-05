@@ -47,7 +47,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../contribution.html">Contribution Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../license.html">License (GNU General Public License)</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Admin Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../events/basic.html">Events</a></li>
@@ -111,7 +111,7 @@
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Games</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/user/games/basic.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/admin/games/basic.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -196,24 +196,17 @@ In the bottom you can now add Game Servers to the game in the <code class="docut
 </ul>
 <p>The available variables are:</p>
 <ul class="simple">
-<li><p>{&gt;gameServer-&gt;address}</p></li>
-<li><p>{&gt;gameServer-&gt;game_port}</p></li>
-<li><p>{&gt;§gameServer-&gt;game_password}</p></li>
-<li><p>{&gt;gameServer-&gt;stream_port}</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{&gt;gameServer-&gt;address}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{&gt;gameServer-&gt;game_port}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{&gt;§gameServer-&gt;game_password}</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{&gt;gameServer-&gt;stream_port}</span></code></p></li>
 </ul>
 <p>Examples:</p>
 <ul class="simple">
-<li><p>So for example your <code class="docutils literal notranslate"><span class="pre">Connect</span> <span class="pre">Game</span> <span class="pre">URL</span></code> for a steam game could look something like that:</p></li>
+<li><p>So for example your <code class="docutils literal notranslate"><span class="pre">Connect</span> <span class="pre">Game</span> <span class="pre">URL</span></code> for a steam game could look something like that: <code class="docutils literal notranslate"><span class="pre">steam://connect/{&gt;gameServer-&gt;address}:{&gt;gameServer-&gt;game_port}/{&gt;§gameServer-&gt;game_password}</span></code></p></li>
+<li><p>Also for example your <code class="docutils literal notranslate"><span class="pre">Connect</span> <span class="pre">Game</span> <span class="pre">Command</span></code> for a steam game could look something like that: <code class="docutils literal notranslate"><span class="pre">password</span> <span class="pre">{&gt;§gameServer-&gt;game_password};</span> <span class="pre">connect</span> <span class="pre">{&gt;gameServer-&gt;address}:{&gt;gameServer-&gt;game_port}</span></code></p></li>
+<li><p>Also for example your <code class="docutils literal notranslate"><span class="pre">Connect</span> <span class="pre">Stream</span> <span class="pre">URL</span></code> for a steam game could look something like that: <code class="docutils literal notranslate"><span class="pre">steam://connect/{&gt;gameServer-&gt;address}:{&gt;gameServer-&gt;stream_port}</span></code></p></li>
 </ul>
-<p><code class="docutils literal notranslate"><span class="pre">steam://connect/{&gt;gameServer-&gt;address}:{&gt;gameServer-&gt;game_port}/{&gt;§gameServer-&gt;game_password}</span></code></p>
-<ul class="simple">
-<li><p>Also for example your <code class="docutils literal notranslate"><span class="pre">Connect</span> <span class="pre">Game</span> <span class="pre">Command</span></code> for a steam game could look something like that:</p></li>
-</ul>
-<p><code class="docutils literal notranslate"><span class="pre">password</span> <span class="pre">{&gt;§gameServer-&gt;game_password};</span> <span class="pre">connect</span> <span class="pre">{&gt;gameServer-&gt;address}:{&gt;gameServer-&gt;game_port}</span></code></p>
-<ul class="simple">
-<li><p>Also for example your <code class="docutils literal notranslate"><span class="pre">Connect</span> <span class="pre">Stream</span> <span class="pre">URL</span></code> for a steam game could look something like that:</p></li>
-</ul>
-<p><code class="docutils literal notranslate"><span class="pre">steam://connect/{&gt;gameServer-&gt;address}:{&gt;gameServer-&gt;stream_port}</span></code></p>
 <p>If you set everything, your Server looks like this in the event live view:</p>
 <a class="reference internal image-reference" href="../../_images/games_gameserver_03.png"><img alt="eventula event deletion" class="align-center" src="../../_images/games_gameserver_03.png" style="width: 619.5px; height: 390.5px;" /></a>
 <p>And like this on your Homepage:</p>

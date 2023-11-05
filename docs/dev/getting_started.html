@@ -20,7 +20,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Folderstructure" href="folderstructure.html" />
-    <link rel="prev" title="Tutorials" href="../user/tutorials/basic.html" /> 
+    <link rel="prev" title="Tutorials" href="../admin/tutorials/basic.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -47,28 +47,58 @@
 <li class="toctree-l1"><a class="reference internal" href="../contribution.html">Contribution Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../license.html">License (GNU General Public License)</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
+<p class="caption" role="heading"><span class="caption-text">Admin Documentation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../user/getting_started.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/events/basic.html">Events</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/news.html">News</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/usermanagement.html">Usermanagement</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/polls.html">Polls</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/venues.html">Venues</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/gallery.html">(File)Gallery</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/help.html">Help System</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/games/basic.html">Games</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/matchmaking.html">Matchmaking</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/purchases.html">Purchases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/settings/basic.html">Settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/mailing.html">Newsletter / Mailing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/credit.html">Credit System</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/shop.html">Shop</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/tutorials/basic.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin/getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin/events/basic.html">Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin/news.html">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin/usermanagement.html">Usermanagement</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin/polls.html">Polls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin/venues.html">Venues</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin/gallery.html">(File)Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin/help.html">Help System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin/games/basic.html">Games</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin/matchmaking.html">Matchmaking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin/purchases.html">Purchases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin/settings/basic.html">Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin/mailing.html">Newsletter / Mailing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin/credit.html">Credit System</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin/shop.html">Shop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../admin/tutorials/basic.html">Tutorials</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Developer Documentation</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#initial-setup">Initial setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#clone-repository">1. Clone Repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#run-initial-setup">2. Run initial setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skip-eventula-installation-page-optional">3. skip eventula installation page (optional)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#running-after-initial-setup">Running after initial setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#run-the-development-stack-after-the-first-run">Run the development stack after the first run</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#run-the-development-stack-after-the-first-run-with-docker-rebuild">Run the development stack after the first run with docker rebuild</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#container-environment">Container Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nessecary-useful-commands-for-development">Nessecary/useful commands for development</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#stop">Stop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#purge-all-temporary-local-filed">Purge all “temporary” local filed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#migrate-seed-database">Migrate &amp; Seed Database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rebuild-npm-dependencies-stylesheets">Rebuild NPM Dependencies / Stylesheets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#run-composer-install">Run Composer install</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#add-composer-dependency">Add Composer dependency</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#add-composer-dev-dependency">Add Composer dev dependency</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clear-the-cache">clear the cache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#generate-testusers">generate testusers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#run-database-command-sql-command">run database command / sql command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#run-command-in-the-dev-container">run command in the dev container</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#recreate-the-database-from-scratch">recreate the database from scratch</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="folderstructure.html">Folderstructure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="games/gamecommandhandler.html">GameCommandHandler</a></li>
 <li class="toctree-l1"><a class="reference internal" href="games/gamematchapihandler.html">GameMatchApiHandler</a></li>
@@ -106,13 +136,142 @@
              
   <section id="getting-started">
 <h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading"></a></h1>
+<p>To develop eventula, you should use the Makefile the repository.</p>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Docker v17+</p></li>
+<li><p>Docker-compose v1.18+</p></li>
+<li><p>API Keys for one of the Payment Providers</p></li>
+<li><p>you need <code class="docutils literal notranslate"><span class="pre">make</span></code> installed</p></li>
+</ul>
+</section>
+<section id="initial-setup">
+<h2>Initial setup<a class="headerlink" href="#initial-setup" title="Permalink to this heading"></a></h2>
+<p>This method uses docker-compose to build the image and database from the source code instead of pulling them from docker hub.</p>
+<p>You need the whole source code cloned for running this!</p>
+<p>Its worth checking out the Makefile, there are many useful commands implemented that you can use to make your life easier.</p>
+<p>This Makefile will be documented fully soon.</p>
+<section id="clone-repository">
+<h3>1. Clone Repository<a class="headerlink" href="#clone-repository" title="Permalink to this heading"></a></h3>
+<p>Run <code class="docutils literal notranslate"><span class="pre">https://github.com/Lan2Play/eventula-manager.git</span></code> and change into it.</p>
+</section>
+<section id="run-initial-setup">
+<h3>2. Run initial setup<a class="headerlink" href="#run-initial-setup" title="Permalink to this heading"></a></h3>
+<p>Run the developmet stack initially</p>
+<p><code class="docutils literal notranslate"><span class="pre">make</span></code></p>
+<p>you should have a fully working development environment after that. The container is ran interactiveley, so you can let it running or exit it with STRG+C</p>
+</section>
+<section id="skip-eventula-installation-page-optional">
+<h3>3. skip eventula installation page (optional)<a class="headerlink" href="#skip-eventula-installation-page-optional" title="Permalink to this heading"></a></h3>
+<p>to skip the installation page of eventula, you can run</p>
+<p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">set-installed</span></code>
+and
+<code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">generate-testuser</span></code></p>
+<p>The login credentials are mentioned in the <a class="reference internal" href="#generate-testusers"><span class="std std-ref">generate testusers</span></a> section below.</p>
+</section>
+</section>
+<section id="running-after-initial-setup">
+<h2>Running after initial setup<a class="headerlink" href="#running-after-initial-setup" title="Permalink to this heading"></a></h2>
+<section id="run-the-development-stack-after-the-first-run">
+<h3>Run the development stack after the first run<a class="headerlink" href="#run-the-development-stack-after-the-first-run" title="Permalink to this heading"></a></h3>
+<p>Run the developmet stack after the initial setup interactiveley again. This will not build the container image again, since you only need to do that if you change something on the container.</p>
+<p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">interactive</span></code></p>
+</section>
+<section id="run-the-development-stack-after-the-first-run-with-docker-rebuild">
+<h3>Run the development stack after the first run with docker rebuild<a class="headerlink" href="#run-the-development-stack-after-the-first-run-with-docker-rebuild" title="Permalink to this heading"></a></h3>
+<p>Run the developmet stack after the initial setup detached again. This will rebuild the container image before running.</p>
+<p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">dev</span></code></p>
+</section>
+</section>
+<section id="container-environment">
+<h2>Container Environment<a class="headerlink" href="#container-environment" title="Permalink to this heading"></a></h2>
+<p>The makefile will copy the <code class="docutils literal notranslate"><span class="pre">.env.example</span></code> from the root of the repository to <code class="docutils literal notranslate"><span class="pre">src/.env</span></code>. You can customize <code class="docutils literal notranslate"><span class="pre">src/.env</span></code> to your needs if you need something.
+The .env file should have all Nessecary comments to understand the purpose of the variables.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Keep in mind that the passwords that are predifened in the env example are also required for some of the make commands with hardcoded passwords, so dont change these!</p>
+</div>
+</section>
+<section id="nessecary-useful-commands-for-development">
+<h2>Nessecary/useful commands for development<a class="headerlink" href="#nessecary-useful-commands-for-development" title="Permalink to this heading"></a></h2>
+<p>All the commands should be run when the stack is running (other than you know what you are doing). There are some more commands in the Makefile, so you might take a look.</p>
+<section id="stop">
+<h3>Stop<a class="headerlink" href="#stop" title="Permalink to this heading"></a></h3>
+<p>Stop the stack.</p>
+<p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">stop</span></code></p>
+</section>
+<section id="purge-all-temporary-local-filed">
+<h3>Purge all “temporary” local filed<a class="headerlink" href="#purge-all-temporary-local-filed" title="Permalink to this heading"></a></h3>
+<p>To rebuild everything (if you for example switch branches), you can run</p>
+<p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">purge-all</span></code></p>
+<p>after that you have to run the initial setup again.</p>
+</section>
+<section id="migrate-seed-database">
+<h3>Migrate &amp; Seed Database<a class="headerlink" href="#migrate-seed-database" title="Permalink to this heading"></a></h3>
+<p>If you make changes to the Database files, you can run Database migrations or seeding with the following commands.</p>
+<p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">database-migrate</span></code>
+<code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">database-seed</span></code></p>
+</section>
+<section id="rebuild-npm-dependencies-stylesheets">
+<h3>Rebuild NPM Dependencies / Stylesheets<a class="headerlink" href="#rebuild-npm-dependencies-stylesheets" title="Permalink to this heading"></a></h3>
+<p>If you make changes to the style sheets or npm Dependencies, you can run</p>
+<p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">npm-install-dev</span></code></p>
+</section>
+<section id="run-composer-install">
+<h3>Run Composer install<a class="headerlink" href="#run-composer-install" title="Permalink to this heading"></a></h3>
+<p>If you make changes to the composer Dependencies, you can run</p>
+<p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">composer-install-dev</span></code></p>
+</section>
+<section id="add-composer-dependency">
+<h3>Add Composer dependency<a class="headerlink" href="#add-composer-dependency" title="Permalink to this heading"></a></h3>
+<p>If you want to add a composer Dependency, you can run</p>
+<p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">composer-add-dep</span> <span class="pre">module=module/namehere</span></code></p>
+</section>
+<section id="add-composer-dev-dependency">
+<h3>Add Composer dev dependency<a class="headerlink" href="#add-composer-dev-dependency" title="Permalink to this heading"></a></h3>
+<p>If you want to add a composer dev Dependency, you can run</p>
+<p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">composer-add-dep-dev</span> <span class="pre">module=module/namehere</span></code></p>
+</section>
+<section id="clear-the-cache">
+<h3>clear the cache<a class="headerlink" href="#clear-the-cache" title="Permalink to this heading"></a></h3>
+<p>If you want to clear laravels cache, you can run</p>
+<p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">purge-cache</span></code></p>
+</section>
+<section id="generate-testusers">
+<h3>generate testusers<a class="headerlink" href="#generate-testusers" title="Permalink to this heading"></a></h3>
+<p>If you want to generate testusers, you can run</p>
+<p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">generate-testuser</span></code></p>
+<p>this will add 50 testusers with the following credentials (replace <code class="docutils literal notranslate"><span class="pre">%N%</span></code> with a number from 1-50):</p>
+<p>Mail: <code class="docutils literal notranslate"><span class="pre">test%N%&#64;test.de</span></code>
+Password: <code class="docutils literal notranslate"><span class="pre">test%N%test%N%</span></code></p>
+<p>and an additional Administrator user:</p>
+<p>Mail: <code class="docutils literal notranslate"><span class="pre">Administrator1&#64;Administrator.de</span></code>
+Password: <code class="docutils literal notranslate"><span class="pre">Administrator1Administrator1</span></code></p>
+</section>
+<section id="run-database-command-sql-command">
+<h3>run database command / sql command<a class="headerlink" href="#run-database-command-sql-command" title="Permalink to this heading"></a></h3>
+<p>If you want to run a sql query, you can simply use:</p>
+<p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">database-command</span> <span class="pre">command=&quot;sqlcommandhere&quot;</span></code></p>
+</section>
+<section id="run-command-in-the-dev-container">
+<h3>run command in the dev container<a class="headerlink" href="#run-command-in-the-dev-container" title="Permalink to this heading"></a></h3>
+<p>If you want to run a command in the container, you can simply use:</p>
+<p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">command</span> <span class="pre">command=&quot;commandhere&quot;</span></code></p>
+</section>
+<section id="recreate-the-database-from-scratch">
+<h3>recreate the database from scratch<a class="headerlink" href="#recreate-the-database-from-scratch" title="Permalink to this heading"></a></h3>
+<p>If you want to recreate the databse, you can simply use:</p>
+<p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">database-renew</span></code></p>
+</section>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../user/tutorials/basic.html" class="btn btn-neutral float-left" title="Tutorials" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../admin/tutorials/basic.html" class="btn btn-neutral float-left" title="Tutorials" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="folderstructure.html" class="btn btn-neutral float-right" title="Folderstructure" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
