@@ -285,21 +285,35 @@ If you want to add a whole language, copy the whole en folder and rename it to t
 <li><p>Can another feature thats already implemented be expanded? yes? then go for that instead of Building complete new stuff!</p></li>
 <li><p>Does the addition / change might affect other usecases than your own? Build your changes with legacy support in mind!</p></li>
 <li><p>Try to follow the coding Style which is used within eventula, just look around in our features to see which case is handled mostly in which manner</p></li>
-<li><p>Have i started an issue to announce that im working on a feature/change to get thoughts from the other developers and to prevent incompatibillities? No? Go for it! :)</p></li>
 <li><p>Why i shouldn’t join the eventula discord developer channel for discussion?</p></li>
+</ul>
+<p>To start a new code contribution please:</p>
+<ul class="simple">
+<li><p>open an issue to announce that you are working on a feature/change to get thoughts from the other developers and to prevent incompatibillities</p></li>
+<li><p>make your fork PugSharp (if you are not already a acknowledged developer who can create branches on our repository)</p></li>
+<li><p>make a new branch based on <code class="docutils literal notranslate"><span class="pre">dev</span></code> with the Name <code class="docutils literal notranslate"><span class="pre">feature/examplefeature</span></code></p></li>
+<li><p>as soon as you have code, please open a draft pull request against the <code class="docutils literal notranslate"><span class="pre">dev</span></code> branch.</p></li>
 </ul>
 <p>Before you want to PR changes you should ask yourself some questions:</p>
 <ul class="simple">
 <li><p>Have i tried to update a running version from eventula with data to the one with my changes? Are the changes update proof?</p></li>
-<li><p>Have i implemented all strings with localised variables? See Localisation!</p></li>
-<li><p>Have i changed the documentation (at least the english on!) on the affected parts?</p></li>
+<li><p>Have i changed the admin documentation on the affected parts?</p></li>
+<li><p>Have i implemented all strings with localized variables? See Localisation!</p></li>
+<li><p>Have i changed the developer documentation on the affected parts?</p></li>
 <li><p>Have i changed the readme.md on the affected parts?</p></li>
+<li><p>Does my pull request have a good speaking name that represents my changes in the changelog?</p></li>
+<li><p>Do i have merged the current <code class="docutils literal notranslate"><span class="pre">dev</span></code> branch into my feature branch?</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Please open your pull requests against our <code class="docutils literal notranslate"><span class="pre">dev</span></code> branch.
 We will not merge to master directly!</p>
 </div>
+<p>What will happen after you have converted to the finalized pull request:</p>
+<ul class="simple">
+<li><p>Someone of the core developer team will review your code and will help you to find missing things or bugs.</p></li>
+<li><p>As soon as the review is done, your code will be merged to dev (where can be tested for a few days) and will get merged to main as soon as possible. Currently we make releases in a rolling manner.</p></li>
+</ul>
 </section>
 </section>
 
