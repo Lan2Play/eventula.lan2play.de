@@ -167,7 +167,7 @@
 <h3>2. Create your environment file<a class="headerlink" href="#create-your-environment-file" title="Permalink to this heading"></a></h3>
 <p>create a folder where you put your .environment and your docker compose file in.</p>
 <p>Then create the <code class="docutils literal notranslate"><span class="pre">.env</span></code> file.</p>
-<p>Fill in the APP_KEY from the last step and all other empty Variables (if not optional ones).</p>
+<p>Fill in the APP_KEY from the last step and all other empty Variables (if not optional ones). By default you have to set your API keys in your Admin interface, so you don’t have to insert them here. If you want that instead, you have to set <code class="docutils literal notranslate"><span class="pre">ENV_OVERRIDE=true</span></code> in your App Settings below.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">###################</span>
 <span class="c1">## User Settings ##</span>
 <span class="c1">###################</span>
@@ -194,8 +194,8 @@
 <span class="nv">FORCE_APP_HTTPS</span><span class="o">=</span><span class="nb">true</span>
 <span class="c1"># HTTPS Only Cookies - By setting this option to true, session cookies will only be sent back to the server if the browser has a HTTPS connection. This will keep the cookie from being sent to you if it can not be done securely.</span>
 <span class="nv">SESSION_SECURE_COOKIE</span><span class="o">=</span><span class="nb">true</span>
-<span class="c1"># ENV Overide If set to true, the App will take its API Keys from the ENV instead of the database. This includes Paypal, Stripe, Facebook, Challonge, Google Analytics, Facebook Analytics and Steam. With the default setting, you have to configure those credentials below.</span>
-<span class="nv">ENV_OVERRIDE</span><span class="o">=</span><span class="nb">true</span>
+<span class="c1"># ENV Overide If set to true, the App will take its API Keys from the ENV instead of the database. This includes Paypal, Stripe, Facebook, Challonge, Google Analytics, Facebook Analytics and Steam. With the default setting, you have to configure those credentials in the admin menu.</span>
+<span class="nv">ENV_OVERRIDE</span><span class="o">=</span><span class="nb">false</span>
 
 
 <span class="c1">#######################</span>
@@ -286,6 +286,12 @@
 <span class="nv">TIMEZONE</span><span class="o">=</span>Europe/Berlin
 <span class="nv">TZ</span><span class="o">=</span>Europe/Berlin
 
+
+<span class="c1">#################################################################################################################################</span>
+<span class="c1">#################################################################################################################################</span>
+<span class="c1">## Warning: if you want to configure any API credentials below, you have to set ENV_OVERRIDE=true under the App Settings above ##</span>
+<span class="c1">#################################################################################################################################</span>
+<span class="c1">#################################################################################################################################</span>
 
 <span class="c1">#######################</span>
 <span class="c1">## Payment Providers ##</span>
