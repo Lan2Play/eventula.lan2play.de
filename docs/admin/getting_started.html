@@ -403,7 +403,13 @@
 <section id="start-your-stack-and-wait">
 <h3>4. Start your stack and wait<a class="headerlink" href="#start-your-stack-and-wait" title="Permalink to this heading"></a></h3>
 <p>Run <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">compose</span> <span class="pre">up</span> <span class="pre">-d</span> <span class="pre">&amp;&amp;</span> <span class="pre">docker</span> <span class="pre">compose</span> <span class="pre">logs</span> <span class="pre">-f</span></code> or <code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">up</span> <span class="pre">-d</span> <span class="pre">&amp;&amp;</span> <span class="pre">docker-compose</span> <span class="pre">logs</span> <span class="pre">-f</span></code> depending on your docker compose version.</p>
-<p>Give the stack a few minutes to start. In the beginning there will be errors that come from the missing database availability, you can ignore them.</p>
+<p>Give the stack a few minutes to start.</p>
+<blockquote>
+<div><div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>In the beginning there will be errors that come from the missing database availability, you can ignore them all, including the <code class="docutils literal notranslate"><span class="pre">unable</span> <span class="pre">to</span> <span class="pre">find</span> <span class="pre">the</span> <span class="pre">IP</span> <span class="pre">address</span> <span class="pre">for</span> <span class="pre">the</span> <span class="pre">container</span></code> error from traefik.</p>
+</div>
+</div></blockquote>
 <p>After a few minutes your log should show <code class="docutils literal notranslate"><span class="pre">NOTICE:</span> <span class="pre">ready</span> <span class="pre">to</span> <span class="pre">handle</span> <span class="pre">connections</span></code> and should be reachable with <code class="docutils literal notranslate"><span class="pre">https://$APP_URL</span></code> in your browser.</p>
 </section>
 <section id="installation-page">
