@@ -194,7 +194,7 @@
 <span class="nv">FORCE_APP_HTTPS</span><span class="o">=</span><span class="nb">true</span>
 <span class="c1"># HTTPS Only Cookies - By setting this option to true, session cookies will only be sent back to the server if the browser has a HTTPS connection. This will keep the cookie from being sent to you if it can not be done securely.</span>
 <span class="nv">SESSION_SECURE_COOKIE</span><span class="o">=</span><span class="nb">true</span>
-<span class="c1"># ENV Overide If set to true, the App will take its API Keys from the ENV instead of the database. This includes Paypal, Stripe, Facebook, Challonge, Google Analytics, Facebook Analytics and Steam. With the default setting, you have to configure those credentials in the admin menu.</span>
+<span class="c1"># ENV Overide If set to true, the App will take its API Keys from the ENV instead of the database. This includes Paypal, Stripe, Challonge,and Steam. With the default setting, you have to configure those credentials in the admin menu.</span>
 <span class="nv">ENV_OVERRIDE</span><span class="o">=</span><span class="nb">false</span>
 
 
@@ -311,18 +311,11 @@
 <span class="c1">## Third Party Services ##</span>
 <span class="c1">##########################</span>
 
-<span class="c1">## Google Analytics (Optional) - https://api.google.com</span>
-<span class="nv">GOOGLE_ANALYTICS_TRACKING_ID</span><span class="o">=</span>
-
-<span class="c1">## Steam (optional) - https://steamcommunity.com/dev/apikey</span>
+<span class="w"> </span><span class="c1">## Steam (optional) - https://steamcommunity.com/dev/apikey</span>
 <span class="nv">STEAM_API_KEY</span><span class="o">=</span>
 
 <span class="c1">## Tournaments (optional) - https://challonge.com/settings/developer</span>
 <span class="nv">CHALLONGE_API_KEY</span><span class="o">=</span>
-
-<span class="c1">## Facebook (optional) - https://developers.facebook.com</span>
-<span class="nv">FACEBOOK_APP_ID</span><span class="o">=</span>
-<span class="nv">FACEBOOK_APP_SECRET</span><span class="o">=</span>
 </pre></div>
 </div>
 </section>
@@ -478,17 +471,11 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">CHALLONGE_API_KEY</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">APP_KEY</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">CHALLONGE_API_KEY</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">FACEBOOK_APP_ID</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">FACEBOOK_APP_SECRET</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">STRIPE_PUBLIC_KEY</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">STRIPE_SECRET_KEY</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">PAYPAL_USERNAME</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">PAYPAL_PASSWORD</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">PAYPAL_SIGNATURE</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ANALYTICS_TRACKING_ID</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ANALYTICS_TRACKING_ID</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ANALYTICS_TRACKING_ID</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ANALYTICS_TRACKING_ID</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">APPEAR_DISABLE_CUSTOM_CSS_LINKING</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">APPEAR_DISABLE_ADMIN_APPEARANCE_CSS_SETTINGS</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ENV_OVERRIDE</span></code></p></li>
